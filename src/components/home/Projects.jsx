@@ -1,0 +1,88 @@
+import YeahMovies from "../../assets/YeahMovies.png";
+import SnapShot from "../../assets/SnapShot.png";
+import PennyFlow from "../../assets/PennyFlow.png";
+import ScheduleTracker from "../../assets/ScheduleTracker.png";
+
+const Projects = () => {
+  const projectsData = [
+    {
+      img: SnapShot,
+      stack:
+        "REACT, VITE, REACT-ROUTER, FIREBASE, TAILWIND, FORMIK, YUP, VERCEL",
+      name: "SnapShot",
+      description:
+        "SnapShot A full-stack notes app with real-time sync, user authentication with email verification, protected routes, and a light/dark theme toggle.",
+      link: "https://notes-app-react-liard.vercel.app/dashboard",
+    },
+    {
+      img: PennyFlow,
+      stack: "REACT, VITE, REACT-ROUTER, RECHARTS, TAILWIND, DAYJS, VERCEL",
+      name: "PennyFlow",
+      description:
+        "PennyFlow A personal finance tracker to log and categorize expenses, with an interactive dashboard and charts to visualize spending over time.",
+      link: "https://expense-tracker-react-theta-six.vercel.app/",
+    },
+    {
+      img: ScheduleTracker,
+      stack: "HTML, CSS, JAVASCRIPT, EXPRESS, MONGODB, JWT, VERCEL",
+      name: "Schedule Tracker",
+      description:
+        "Schedule Tracker A full-stack daily habit and schedule tracking app where users create entries and check them off each day, with JWT auth, per-user data scoping, and a REST API backend.",
+      link: "https://schedule-tracker-nu.vercel.app/",
+    },
+    {
+      img: YeahMovies,
+      stack: "HTML, CSS, JAVASCRIPT, TMDB-API, LOCALSTORAGE, GITHUB-PAGES",
+      name: "YeahMovies",
+      description:
+        "YeahMovies A static movie discovery app powered by the TMDB API. Browse trending, top-rated, and upcoming films, search by title or actor, filter by genre, and save favorites to a local watchlist.",
+      link: "https://piyushnegidev.github.io/YeahMovies/",
+    },
+  ];
+
+  return (
+    <div className="max-w-341.5 mx-auto space-y-20">
+      <div className="flex item-center justify-between">
+        <p className="text-3xl flex items-center">
+          <span className="text-primary">#</span>
+          <span>projects</span>
+          <span className="h-0.5 mt-2 ml-5 bg-primary w-0 sm:w-50 md:w-100"></span>
+        </p>
+        <p
+          className="cursor-pointer mt-2"
+          onClick={() => {
+            console.log("test");
+          }}
+        >
+          View all {"---->"}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(500px,1fr))] gap-5">
+        {projectsData.map((data) => {
+          return (
+            <div className="border border-gray">
+              <div className="border-b border-gray">
+                <img src={data.img} alt="" />
+              </div>
+              <div className="border-b border-gray">
+                <p className="text-gray p-2">{data.stack}</p>
+              </div>
+              <div className="space-y-5 p-4">
+                <h2 className="text-2xl font-semibold">{data.name}</h2>
+                <p className="text-gray">{data.description}</p>
+                <a target="blank" href={data.link}>
+                  <button className="cursor-pointer border border-primary p-2">
+                    <span>Live {"<-->"}</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
