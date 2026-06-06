@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+#root {
+  background-color: #282c33;
+  min-height: 100vh;
+  min-width: calc(100vw - scrollbar-width);
+}
+
 @theme {
   --color-bg: #282c33;
   --color-primary: #c778dd;

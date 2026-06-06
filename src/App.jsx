@@ -1,43 +1,27 @@
-import { NavLink } from "react-router-dom";
-import Hero from "./components/home/Hero";
+import { Route, Routes } from "react-router-dom";
 import Projects from "./components/home/Projects";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import AboutMe from "./components/home/AboutMe";
 
 const App = () => {
   return (
-    <div className="px-10 lg:px-30 bg-bg text-white space-y-20">
-      <nav className="flex items-center justify-between pt-5 z-10 sticky top-0 bg-bg">
-        <div className="flex items-center gap-5">
-          <img src="/logo-white.svg" alt="" />
-          <span className="text-xl md:text-2xl">piyushNegi</span>
-        </div>
-        <ul className="flex gap-4 md:text-xl">
-          <li>
-            <NavLink to="/">
-              <span className="text-primary">#</span>home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/projects">
-              <span className="text-primary">#</span>projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about-me">
-              <span className="text-primary">#</span>about-me
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contacts">
-              <span className="text-primary">#</span>contacts
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+    <>
+      <Navbar />
+      <div className="px-5 sm:px-10 lg:px-30 bg-bg text-white space-y-20 max-w-341.5 mx-auto ">
+        <AnimatedRoutes />
+      </div>
+    </>
+  );
+};
 
-      <Hero />
-
-      <Projects />
-    </div>
+const AnimatedRoutes = () => {
+  return (
+    <Routes>
+      <Route index element={<HomePage />}></Route>
+      <Route path="/projects" element={<Projects />}></Route>
+      <Route path="/about-me" element={<AboutMe />}></Route>
+    </Routes>
   );
 };
 

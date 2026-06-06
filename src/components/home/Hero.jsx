@@ -1,9 +1,10 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "motion/react";
+import AnimatedButton from "../AnimatedButton";
 
 const Hero = () => {
   return (
-    <div className="space-y-20 max-w-341.5 mx-auto">
+    <div id="home" className="space-y-20 scroll-mt-35">
       <div className="flex max-lg:flex-col items-center justify-center gap-20">
         <div className="space-y-5 lg:space-y-10 max-lg:text-center max-lg:order-1">
           <p className="text-4xl max-sm:text-3xl font-semibold text-gray">
@@ -27,9 +28,13 @@ const Hero = () => {
               repeat={Infinity}
             />
           </p>
-          <button className="border-2 cursor-pointer hover:rounded-2xl hover:border-white hover:text-primary transition-all border-primary px-5 py-3">
+          <AnimatedButton
+            className={
+              "border-2 cursor-pointer  hover:border-white hover:text-primary  border-primary px-5 py-3 transition-colors"
+            }
+          >
             Contact me !!
-          </button>
+          </AnimatedButton>
         </div>
 
         <div className="relative flex flex-col items-center max-lg:order-0">
@@ -44,7 +49,7 @@ const Hero = () => {
             src="/Dots.png"
             alt=""
           />
-          <p className="flex gap-3 items-center border border-gray px-2 py-1">
+          <div className="flex gap-3 items-center border border-gray px-2 py-1">
             <motion.div
               animate={{
                 scale: [1, 1.15, 1],
@@ -65,7 +70,7 @@ const Hero = () => {
             <span className="text-lg text-center">
               <span className="text-gray">Currently working on</span> Portfolio
             </span>
-          </p>
+          </div>
         </div>
       </div>
 
