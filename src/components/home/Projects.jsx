@@ -9,9 +9,11 @@ import { motion } from "motion/react";
 const container = {
   hidden: {
     opacity: 0,
+    y: -20,
   },
   visible: {
     opacity: 1,
+    y: 0,
     transition: { staggerChildren: 0.15, delayChildren: 0.15 },
   },
 };
@@ -84,33 +86,38 @@ const Projects = () => {
         </p>
       </div>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        className="grid grid-cols-[repeat(auto-fit,minmax(335px,1fr))] gap-5"
-      >
+      <motion.div className="grid grid-cols-[repeat(auto-fit,minmax(335px,1fr))] gap-5">
         {projectsData.map((data) => {
           return (
             <motion.div
               key={data.name}
-              variants={item}
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
               className="border border-gray shadow shadow-primary"
             >
               <div className="border-b border-gray">
                 <img src={data.img} alt="" />
               </div>
               <div className="border-b border-gray">
-                <p className="text-gray p-2">{data.stack}</p>
+                <motion.p variants={item} className="text-gray p-2">
+                  {data.stack}
+                </motion.p>
               </div>
               <div className="space-y-5 p-4">
-                <h2 className="text-2xl font-semibold flow-text">
+                <motion.h2
+                  variants={item}
+                  className="text-2xl font-semibold flow-text"
+                >
                   {data.name}
-                </h2>
-                <p className="text-gray">{data.description}</p>
+                </motion.h2>
+                <motion.p variants={item} className="text-gray">
+                  {data.description}
+                </motion.p>
                 <a target="blank" href={data.link}>
                   <AnimatedButton
+                    variants={item}
                     className={"cursor-pointer border border-primary p-2"}
                   >
                     <span>Live {"<-->"}</span>
