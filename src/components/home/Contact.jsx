@@ -1,5 +1,29 @@
 import { CgMail } from "react-icons/cg";
 import ContactForm from "../ContactForm";
+import { motion } from "motion/react";
+
+const container = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.15, delayChildren: 0.15 },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const Contact = () => {
   return (
@@ -11,7 +35,12 @@ const Contact = () => {
           <span className="h-0.5 mt-2 ml-5 bg-primary w-full sm:w-50 md:w-100"></span>
         </p>
 
-        <div className="">
+        <motion.div
+          initial={{ opacity: 0, x: -120 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9 }}
+          className=""
+        >
           <p className="text-gray text-lg mb-10">
             Whether you have an opportunity, a project, or just want to connect,
             my inbox is always open. I'm currently seeking a full-time Front-end
@@ -25,15 +54,23 @@ const Contact = () => {
               <span>piyushnegi381@gmail.com</span>
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="">
-        <h2 className="mb-10 text-2xl font-semibold flow-text">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        className=""
+      >
+        <motion.h2
+          variants={item}
+          className="mb-10 text-2xl font-semibold flow-text"
+        >
           Don't be shy, say hello!
-        </h2>
-        <ContactForm />
-      </div>
+        </motion.h2>
+        <ContactForm variants={item} />
+      </motion.div>
     </div>
   );
 };

@@ -2,6 +2,8 @@ import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import AnimatedButton from "./AnimatedButton";
 import * as Yup from "yup";
+import { toast } from "react-toastify";
+import { motion } from "motion/react";
 
 const formValidation = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -9,7 +11,7 @@ const formValidation = Yup.object().shape({
   message: Yup.string().required("Message is required"),
 });
 
-const ContactForm = () => {
+const ContactForm = ({ variants }) => {
   const handleSubmit = async ({ name, email, message }) => {
     const data = {
       service_id: import.meta.env.VITE_SERVICE_ID,
@@ -28,6 +30,7 @@ const ContactForm = () => {
         "https://api.emailjs.com/api/v1.0/email/send",
         data,
       );
+      toast.success("Message Sent !");
       console.log(res.data);
     } catch (error) {
       console.log(error.message);
@@ -50,7 +53,7 @@ const ContactForm = () => {
         validationSchema={formValidation}
       >
         <Form className="flex flex-col gap-6">
-          <div className="flex flex-col relative">
+          <motion.div variants={variants} className="flex flex-col relative">
             <label htmlFor="name">Name</label>
             <Field
               type="text"
@@ -61,8 +64,9 @@ const ContactForm = () => {
             <div className="text-xs text-red-500 absolute -bottom-4">
               <ErrorMessage name="name" />
             </div>
-          </div>
-          <div className="flex flex-col relative">
+          </motion.div>
+
+          <motion.div variants={variants} className="flex flex-col relative">
             <label htmlFor="email">Email</label>
             <Field
               type="email"
@@ -73,20 +77,23 @@ const ContactForm = () => {
             <div className="text-xs text-red-500 absolute -bottom-4">
               <ErrorMessage name="email" />
             </div>
-          </div>
-          <div className="flex flex-col relative">
+          </motion.div>
+
+          <motion.div variants={variants} className="flex flex-col relative">
             <label htmlFor="message">Message</label>
-            <textarea
+            <Field
+              as="textarea"
               name="message"
               className="border p-2 rounded-lg focus:outline-none"
               placeholder="Type your message"
-              id=""
+              rows={5}
             />
             <div className="text-xs text-red-500 absolute -bottom-4">
               <ErrorMessage name="message" />
             </div>
-          </div>
+          </motion.div>
           <AnimatedButton
+            variants={variants}
             type="submit"
             className="mr-auto mt-5 border-2 hover:text-primary hover:border-white transition-color border-primary px-4 rounded-lg py-2"
           >

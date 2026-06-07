@@ -3,6 +3,7 @@ import Projects from "./components/home/Projects";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import AboutMe from "./components/home/AboutMe";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
       <div className="px-5 sm:px-10 lg:px-30 bg-bg text-white space-y-20 max-w-341.5 mx-auto ">
         <AnimatedRoutes />
       </div>
+      <div></div>
+      <ToastContainer />
     </>
   );
 };
