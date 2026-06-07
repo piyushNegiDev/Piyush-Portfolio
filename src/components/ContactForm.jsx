@@ -12,7 +12,7 @@ const formValidation = Yup.object().shape({
 });
 
 const ContactForm = ({ variants }) => {
-  const handleSubmit = async ({ name, email, message }) => {
+  const handleSubmit = async ({ name, email, message }, resetForm) => {
     const data = {
       service_id: import.meta.env.VITE_SERVICE_ID,
       template_id: import.meta.env.VITE_TEMPLATE_ID,
@@ -31,8 +31,10 @@ const ContactForm = ({ variants }) => {
         data,
       );
       toast.success("Message Sent !");
+      resetForm();
       console.log(res.data);
     } catch (error) {
+      toast.error("Unable to send message !");
       console.log(error.message);
       console.log(error.response?.data);
     }
@@ -47,8 +49,7 @@ const ContactForm = ({ variants }) => {
           message: "",
         }}
         onSubmit={(values, { resetForm }) => {
-          handleSubmit(values);
-          resetForm();
+          handleSubmit(values, resetForm);
         }}
         validationSchema={formValidation}
       >
