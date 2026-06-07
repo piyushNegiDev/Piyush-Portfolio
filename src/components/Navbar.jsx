@@ -1,13 +1,24 @@
 import { useState } from "react";
 import { MdOutlineMenuOpen } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate("/");
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+  };
+
   return (
     <>
       <nav className="text-white px-5 sm:px-10 flex items-center justify-between py-5 z-10 sticky top-0 bg-bg mb-10">
-        <div className="flex items-center gap-5">
+        <div
+          className="flex items-center gap-5 cursor-pointer"
+          onClick={handleLogoClick}
+        >
           <img src="/logo-white.svg" alt="" />
           <span className="text-2xl">piyushNegi</span>
         </div>

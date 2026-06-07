@@ -38,7 +38,8 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, x: -120 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className=""
         >
           <p className="text-gray text-lg mb-10">
@@ -61,6 +62,7 @@ const Contact = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
         className=""
       >
         <motion.h2

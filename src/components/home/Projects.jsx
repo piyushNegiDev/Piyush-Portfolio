@@ -9,12 +9,12 @@ import { motion } from "motion/react";
 const container = {
   hidden: {
     opacity: 0,
-    y: -20,
+    y: -40,
   },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { staggerChildren: 0.15, delayChildren: 0.15 },
+    transition: { staggerChildren: 0.15, delayChildren: 0.15, duration: 0.5 },
   },
 };
 
@@ -96,7 +96,7 @@ const Projects = () => {
               variants={container}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               className="border border-gray shadow shadow-primary"
             >
               <div className="border-b border-gray">
