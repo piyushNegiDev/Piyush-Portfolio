@@ -59,13 +59,11 @@ const Skills = () => {
 
   return (
     <div id="skills" className="space-y-20 scroll-mt-35">
-      <div className="flex">
-        <p className="text-3xl flex items-center">
-          <span className="text-primary">#</span>
-          <span>skills</span>
-          <span className="h-0.5 mt-2 ml-5 bg-primary w-0 sm:w-50 md:w-100"></span>
-        </p>
-      </div>
+      <p className="text-3xl flex items-center">
+        <span className="text-primary">#</span>
+        <span>skills</span>
+        <span className="h-0.5 mt-2 ml-5 bg-primary w-full sm:w-50 md:w-100"></span>
+      </p>
 
       <div className="grid md:grid-cols-[0.75fr_1.25fr] gap-10 items-start">
         <SkillsCloud />
@@ -73,7 +71,7 @@ const Skills = () => {
           {skillsData.map((data) => (
             <div
               key={data.h}
-              className="rounded-xl shadow shadow-primary/40 border border-primary/50 mb-5 break-inside-avoid"
+              className="rounded-xl shadow shadow-primary/40 border border-primary/50 mb-5 break-inside-avoid hover:shadow-primary hover:border-primary transition-all duration-300"
             >
               <p className="border-b border-primary/30 px-3 py-2 font-semibold">
                 {data.h}

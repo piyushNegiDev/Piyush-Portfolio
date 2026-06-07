@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { MdOutlineMenuOpen } from "react-icons/md";
-import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
@@ -29,9 +28,9 @@ const Navbar = () => {
             </HashLink>
           </li>
           <li>
-            <NavLink to="/contacts">
+            <HashLink smooth to="/#contact">
               <span className="text-primary">#</span>contacts
-            </NavLink>
+            </HashLink>
           </li>
         </ul>
 
@@ -111,9 +110,9 @@ const Navbar = () => {
               setShowMenu((prev) => !prev);
             }}
           >
-            <NavLink to="/contacts">
+            <HashLink smooth to="/#contact">
               <span className="text-primary">#</span>contacts
-            </NavLink>
+            </HashLink>
           </li>
         </ul>
       </div>

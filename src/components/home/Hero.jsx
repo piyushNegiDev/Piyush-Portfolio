@@ -30,7 +30,7 @@ const Hero = () => {
           </p>
           <AnimatedButton
             className={
-              "border-2 cursor-pointer  hover:border-white hover:text-primary  border-primary px-5 py-3 transition-colors"
+              "border-2 rounded-lg cursor-pointer  hover:border-white hover:text-primary  border-primary px-5 py-3 transition-colors"
             }
           >
             Contact me !!

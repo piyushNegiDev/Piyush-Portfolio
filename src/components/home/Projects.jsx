@@ -70,12 +70,14 @@ const Projects = () => {
 
   return (
     <div id="projects" className="space-y-20 scroll-mt-35">
-      <div className="flex item-center justify-between">
+      <div className="flex item-center gap-5">
         <p className="text-3xl flex items-center">
           <span className="text-primary">#</span>
           <span>projects</span>
-          <span className="h-0.5 mt-2 ml-5 bg-primary w-0 sm:w-50 md:w-100"></span>
         </p>
+        <div className="grow mt-5">
+          <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />
+        </div>
         <p
           className="cursor-pointer mt-2"
           onClick={() => {
