@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "motion/react";
 import AnimatedButton from "../AnimatedButton";
+import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
   return (
@@ -28,13 +29,15 @@ const Hero = () => {
               repeat={Infinity}
             />
           </p>
-          <AnimatedButton
-            className={
-              "border-2 rounded-lg cursor-pointer  hover:border-white hover:text-primary  border-primary px-5 py-3 transition-colors"
-            }
-          >
-            Contact me !!
-          </AnimatedButton>
+          <HashLink smooth to="/#contact">
+            <AnimatedButton
+              className={
+                "border-2 rounded-lg cursor-pointer  hover:border-white hover:text-primary  border-primary px-5 py-3 transition-colors"
+              }
+            >
+              Contact me !!
+            </AnimatedButton>
+          </HashLink>
         </div>
 
         <div className="relative flex flex-col items-center max-lg:order-0">

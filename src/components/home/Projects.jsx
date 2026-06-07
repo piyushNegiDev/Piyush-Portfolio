@@ -117,7 +117,7 @@ const Projects = () => {
                 <motion.p variants={item} className="text-gray">
                   {data.description}
                 </motion.p>
-                <a target="blank" href={data.link}>
+                <a target="_blank" rel="noreferrer" href={data.link}>
                   <AnimatedButton
                     variants={item}
                     className={
