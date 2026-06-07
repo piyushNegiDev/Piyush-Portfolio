@@ -220,8 +220,8 @@ export default function SkillsCloud() {
   }, []);
 
   return (
-    <div className="relative h-100 w-100 shadow shadow-primary overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl">
-      <img src="/sitting-image.png" className="absolute" alt="" />
+    <div className="relative mx-auto max-h-100 max-w-100 shadow shadow-primary overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl max-md:order-last">
+      <img src="/sitting-image.png" className="" alt="" />
       {/* Glow */}
       <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />

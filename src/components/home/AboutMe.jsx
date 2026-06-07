@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
+import AnimatedButton from "../AnimatedButton";
 
 const AboutMe = () => {
   const navigate = useNavigate();
@@ -44,10 +45,17 @@ const AboutMe = () => {
             Frontend Developer role where I can build impactful products and
             continue growing my skills.
           </p>
+          <AnimatedButton
+            className={
+              "border-2 cursor-pointer max-[925px]:mx-auto min-[925px]:mr-auto hover:border-white hover:text-primary  border-primary text-white px-5 py-3 transition-colors"
+            }
+          >
+            Read More !!
+          </AnimatedButton>
         </motion.div>
         <div className="relative max-h-100 max-w-100 shadow shadow-primary overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl max-[925px]:mx-auto min-[925px]:ml-auto">
           <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
-          <img src="/sitting-image.png" alt="" />
+          <img src="/project-avatar.jpeg" alt="" />
         </div>
       </div>
     </div>
