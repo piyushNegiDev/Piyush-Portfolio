@@ -97,7 +97,7 @@ const Projects = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
-              className="border border-gray shadow shadow-primary"
+              className="border border-gray shadow shadow-primary/50 hover:shadow-md rounded-xl overflow-hidden hover:shadow-primary hover:border-primary"
             >
               <div className="border-b border-gray">
                 <img src={data.img} alt="" />
@@ -120,7 +120,9 @@ const Projects = () => {
                 <a target="blank" href={data.link}>
                   <AnimatedButton
                     variants={item}
-                    className={"cursor-pointer border border-primary p-2"}
+                    className={
+                      "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                    }
                   >
                     <span>Live {"<-->"}</span>
                   </AnimatedButton>

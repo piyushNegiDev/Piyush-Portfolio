@@ -34,8 +34,12 @@ const App = () => {
           <div className="flex flex-col gap-5 items-center justify-center">
             <h3 className="text-xl font-semibold">Media</h3>
             <div className="flex gap-5">
-              <FaGithub className="text-2xl" />
-              <FaInstagram className="text-2xl" />
+              <a href="https://github.com/piyushNegiDev" target="_blank">
+                <FaGithub className="text-2xl" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <FaInstagram className="text-2xl" />
+              </a>
             </div>
           </div>
         </div>
