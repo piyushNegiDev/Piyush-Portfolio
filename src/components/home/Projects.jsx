@@ -5,6 +5,8 @@ import ScheduleTracker from "../../assets/ScheduleTracker.png";
 import AnimatedButton from "../AnimatedButton";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
+import Tilt from "react-parallax-tilt";
+import { Fragment } from "react";
 
 const container = {
   hidden: {
@@ -91,44 +93,47 @@ const Projects = () => {
       <motion.div className="grid grid-cols-[repeat(auto-fit,minmax(335px,1fr))] gap-5">
         {projectsData.map((data) => {
           return (
-            <motion.div
-              key={data.name}
-              variants={container}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              className="border border-gray shadow shadow-primary/50 hover:shadow-md rounded-xl overflow-hidden hover:shadow-primary hover:border-primary"
-            >
-              <div className="border-b border-gray">
-                <img src={data.img} alt="" />
-              </div>
-              <div className="border-b border-gray">
-                <motion.p variants={item} className="text-gray p-2">
-                  {data.stack}
-                </motion.p>
-              </div>
-              <div className="space-y-5 p-4">
-                <motion.h2
-                  variants={item}
-                  className="text-2xl font-semibold flow-text"
+            <Fragment key={data.name}>
+              <Tilt className="h-full">
+                <motion.div
+                  variants={container}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="h-full border border-gray shadow shadow-primary/50 hover:shadow-md rounded-xl overflow-hidden hover:shadow-primary hover:border-primary"
                 >
-                  {data.name}
-                </motion.h2>
-                <motion.p variants={item} className="text-gray">
-                  {data.description}
-                </motion.p>
-                <a target="_blank" rel="noreferrer" href={data.link}>
-                  <AnimatedButton
-                    variants={item}
-                    className={
-                      "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
-                    }
-                  >
-                    <span>Live {"<-->"}</span>
-                  </AnimatedButton>
-                </a>
-              </div>
-            </motion.div>
+                  <div className="border-b border-gray">
+                    <img src={data.img} alt="" />
+                  </div>
+                  <div className="border-b border-gray">
+                    <motion.p variants={item} className="text-gray p-2">
+                      {data.stack}
+                    </motion.p>
+                  </div>
+                  <div className="space-y-5 p-4">
+                    <motion.h2
+                      variants={item}
+                      className="text-2xl font-semibold flow-text"
+                    >
+                      {data.name}
+                    </motion.h2>
+                    <motion.p variants={item} className="text-gray">
+                      {data.description}
+                    </motion.p>
+                    <a target="_blank" rel="noreferrer" href={data.link}>
+                      <AnimatedButton
+                        variants={item}
+                        className={
+                          "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                        }
+                      >
+                        <span>Live {"<-->"}</span>
+                      </AnimatedButton>
+                    </a>
+                  </div>
+                </motion.div>
+              </Tilt>
+            </Fragment>
           );
         })}
       </motion.div>

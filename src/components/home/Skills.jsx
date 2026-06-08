@@ -1,7 +1,7 @@
 import SkillsCloud from "../SkillsCloud";
 import { motion } from "motion/react";
 
-const containerVariants = {
+const container = {
   hidden: {
     opacity: 0,
     y: -20,
@@ -13,7 +13,7 @@ const containerVariants = {
   },
 };
 
-const badgeVariants = {
+const item = {
   hidden: {
     opacity: 0,
     y: -20,
@@ -79,7 +79,7 @@ const Skills = () => {
 
               <motion.div
                 className="text-gray p-3 flex flex-wrap gap-2"
-                variants={containerVariants}
+                variants={container}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -87,7 +87,7 @@ const Skills = () => {
                 {data.stack.map((stackData) => (
                   <motion.span
                     key={stackData}
-                    variants={badgeVariants}
+                    variants={item}
                     className="border border-gray/50 px-2 py-1 rounded-2xl text-sm"
                   >
                     {stackData}

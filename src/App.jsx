@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import AboutMe from "./components/home/AboutMe";
 import { ToastContainer } from "react-toastify";
 import Footer from "./components/Footer";
 import ProjectPage from "./pages/ProjectPage";
+import AboutMePage from "./pages/AboutMePage";
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const AnimatedRoutes = () => {
     <Routes>
       <Route index element={<HomePage />} />
       <Route path="/projects" element={<ProjectPage />} />
-      <Route path="/about-me" element={<AboutMe />} />
+      <Route path="/about-me" element={<AboutMePage />} />
     </Routes>
   );
 };
