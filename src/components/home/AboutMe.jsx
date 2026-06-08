@@ -15,14 +15,14 @@ const AboutMe = () => {
         <div className="grow mt-5">
           <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />
         </div>
-        <p
+        <button
           className="cursor-pointer mt-2"
           onClick={() => {
             navigate("/about-me");
           }}
         >
           View all {"---->"}
-        </p>
+        </button>
       </div>
 
       <div className="grid min-[925px]:grid-cols-2 gap-5 items-center">
@@ -49,6 +49,9 @@ const AboutMe = () => {
             continue growing my skills.
           </p>
           <AnimatedButton
+            onClick={() => {
+              navigate("/about-me");
+            }}
             className={
               "border-2 rounded-lg cursor-pointer max-[925px]:mx-auto min-[925px]:mr-auto hover:border-white hover:text-primary  border-primary text-white px-5 py-3 transition-colors"
             }

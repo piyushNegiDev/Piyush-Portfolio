@@ -78,14 +78,14 @@ const Projects = () => {
         <div className="grow mt-5">
           <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />
         </div>
-        <p
+        <button
           className="cursor-pointer mt-2"
           onClick={() => {
             navigate("/projects");
           }}
         >
           View all {"---->"}
-        </p>
+        </button>
       </div>
 
       <motion.div className="grid grid-cols-[repeat(auto-fit,minmax(335px,1fr))] gap-5">
