@@ -4,7 +4,7 @@ const FunFactsSection = () => {
       <p className="text-2xl flex items-center">
         <span className="text-primary">#</span>
         <span>my-fun-facts</span>
-        <span className="h-0.5 mt-2 ml-5 bg-primary w-full sm:w-50 md:w-100"></span>
+        <span className="h-0.5 mt-2 ml-5 bg-primary max-sm:grow sm:w-50 md:w-100"></span>
       </p>
 
       <div className="flex max-[900px]:justify-center justify-between">
