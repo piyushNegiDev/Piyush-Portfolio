@@ -29,7 +29,7 @@ const Footer = () => {
               <FaGithub className="text-2xl" />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/piyush_negi381/"
               target="_blank"
               rel="noreferrer"
             >

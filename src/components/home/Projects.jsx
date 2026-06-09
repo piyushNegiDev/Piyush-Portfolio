@@ -84,6 +84,7 @@ const Projects = () => {
           className="cursor-pointer mt-2"
           onClick={() => {
             navigate("/projects");
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           View all {"---->"}

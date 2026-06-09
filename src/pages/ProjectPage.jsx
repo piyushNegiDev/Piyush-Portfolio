@@ -29,6 +29,18 @@ const item = {
 const ProjectPage = () => {
   return (
     <div id="" className="space-y-20 scroll-mt-35">
+      <div className="space-y-20">
+        <div className="flex item-center gap-5">
+          <p className="text-3xl flex items-center">
+            <span className="text-primary">/</span>
+            <span>projects</span>
+          </p>
+          <div className="grow mt-5">
+            <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />
+          </div>
+        </div>
+      </div>
+
       <CompletedProjects container={container} item={item} />
 
       <ShortProjects container={container} item={item} />

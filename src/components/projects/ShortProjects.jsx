@@ -27,11 +27,11 @@ const ShortProjects = ({ container, item }) => {
   ];
 
   return (
-    <div className="space-y-20">
+    <div className="space-y-5">
       <div className="flex item-center gap-5">
-        <p className="text-3xl flex items-center">
+        <p className="text-2xl flex items-center">
           <span className="text-primary">#</span>
-          <span>Small Projects</span>
+          <span>small-projects</span>
         </p>
         <div className="grow mt-5">
           <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />

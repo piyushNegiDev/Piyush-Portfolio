@@ -19,6 +19,7 @@ const AboutMe = () => {
           className="cursor-pointer mt-2"
           onClick={() => {
             navigate("/about-me");
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           View all {"---->"}
@@ -51,6 +52,7 @@ const AboutMe = () => {
           <AnimatedButton
             onClick={() => {
               navigate("/about-me");
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             className={
               "border-2 rounded-lg cursor-pointer max-[925px]:mx-auto min-[925px]:mr-auto hover:border-white hover:text-primary  border-primary text-white px-5 py-3 transition-colors"

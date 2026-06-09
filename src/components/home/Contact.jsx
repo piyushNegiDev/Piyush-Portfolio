@@ -1,6 +1,7 @@
 import { CgMail } from "react-icons/cg";
 import ContactForm from "../ContactForm";
 import { motion } from "motion/react";
+import { FaInstagram } from "react-icons/fa";
 
 const container = {
   hidden: {
@@ -53,6 +54,10 @@ const Contact = () => {
             <p className="text-gray text-lg flex gap-1 items-center">
               <CgMail className="text-3xl" />{" "}
               <span>piyushnegi381@gmail.com</span>
+            </p>
+            <p className="text-gray text-lg flex gap-1 items-center">
+              <FaInstagram className="text-3xl" />{" "}
+              <span>piyush_negi381</span>
             </p>
           </div>
         </motion.div>

@@ -62,15 +62,12 @@ const CompletedProjects = ({ container, item }) => {
   ];
 
   return (
-    <div className="space-y-20">
+    <div className="space-y-5">
       <div className="flex item-center gap-5">
-        <p className="text-3xl flex items-center">
+        <p className="text-2xl flex items-center">
           <span className="text-primary">#</span>
-          <span>Complete Projects</span>
+          <span>complete-projects</span>
         </p>
-        <div className="grow mt-5">
-          <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />
-        </div>
       </div>
 
       <motion.div className="grid grid-cols-[repeat(auto-fit,minmax(335px,1fr))] gap-5">
