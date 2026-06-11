@@ -58,7 +58,7 @@ const Skills = () => {
   ];
 
   return (
-    <div id="skills" className="space-y-20 scroll-mt-35">
+    <div id="skills" className="space-y-5 scroll-mt-35">
       <p className="text-3xl flex items-center">
         <span className="text-primary">#</span>
         <span>skills</span>

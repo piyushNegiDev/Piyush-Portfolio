@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "motion/react";
+import PulseAnimation from "../PulseAnimation";
 import AnimatedButton from "../AnimatedButton";
 import { HashLink } from "react-router-hash-link";
 
@@ -53,23 +53,7 @@ const Hero = () => {
             alt=""
           />
           <div className="flex gap-3 items-center border border-gray px-2 py-1">
-            <motion.div
-              animate={{
-                scale: [1, 1.15, 1],
-                boxShadow: [
-                  "0 0 0px rgba(198, 28, 255, 0.4)",
-                  "0 0 8px rgba(200, 0, 255, 0.7)",
-                  "0 0 0px rgba(153, 0, 255, 0.4)",
-                ],
-              }}
-              transition={{
-                duration: 1.2,
-                repeat: Infinity,
-                repeatType: "reverse",
-                repeatDelay: 0.5,
-              }}
-              className="h-5 w-5 bg-primary"
-            ></motion.div>
+            <PulseAnimation className={"h-5 w-5"} />
             <span className="text-lg text-center">
               <span className="text-gray">Currently working on</span> Portfolio
             </span>

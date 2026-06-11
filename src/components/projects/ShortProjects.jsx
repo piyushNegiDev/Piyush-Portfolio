@@ -1,28 +1,33 @@
 import AnimatedButton from "../AnimatedButton";
 import { motion } from "motion/react";
+import PulseAnimation from "../pulseAnimation";
+import { FaGithub } from "react-icons/fa";
 
 const ShortProjects = ({ container, item }) => {
   const shortProjectsData = [
     {
       stack: "REACT, VITE, TAILWIND CSS, FIREBASE, FORMIK, YUP, VERCEL",
       description:
-        "Contact App is a real-time contact management app that lets users add, edit, delete, and search through their contacts. All data is synced live with Firebase Firestore, with form validation and toast notifications for a smooth, feedback-rich experience.",
+        "A real-time contact management app to add, edit, delete, and search contacts. Data is synced live with Firebase Firestore, with form validation and toast notifications.",
       name: "Contact App",
       link: "https://contact-app-react-coral.vercel.app/",
+      githubLink: "https://github.com/piyushNegiDev/ContactApp-React",
     },
     {
       stack: "HTML, CSS, JAVASCRIPT, NODE.JS, EXPRESS, GEMINI API, VERCEL",
       description:
-        "AI Chat App is a full-stack chatbot application powered by Google's Gemini API. Users can send messages and receive AI-generated responses with markdown rendering support. The Express backend handles API communication, basic request validation, and rate limiting, while the frontend delivers a clean and minimal chat interface.",
+        "A full-stack chatbot powered by Google's Gemini API. Supports markdown rendering, with an Express backend handling API communication, request validation, and rate limiting.",
       name: "AI Chat App",
       link: "https://ai-chat-app-delta-black.vercel.app/",
+      githubLink: "https://github.com/piyushNegiDev/AI-Chat-App",
     },
     {
       stack: "REACT, VITE, CSS, VERCEL",
       description:
-        "BMI Calculator is a simple and clean tool that calculates your Body Mass Index based on your height and weight. It instantly displays your BMI value along with your health category — Underweight, Normal, Overweight, or Obese — in a minimal, easy-to-use interface.",
+        "A simple tool that calculates Body Mass Index based on height and weight, instantly displaying the value along with a health category in a minimal interface.",
       name: "BMI Calculator",
       link: "https://bmi-calculator-psi-tan.vercel.app/",
+      githubLink: "https://github.com/piyushNegiDev/BMI-Calculator",
     },
   ];
 
@@ -64,16 +69,33 @@ const ShortProjects = ({ container, item }) => {
                 <motion.p variants={item} className="text-gray">
                   {data.description}
                 </motion.p>
-                <a target="_blank" rel="noreferrer" href={data.link}>
-                  <AnimatedButton
-                    variants={item}
-                    className={
-                      "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
-                    }
-                  >
-                    <span>Live {"<-->"}</span>
-                  </AnimatedButton>
-                </a>
+                <div className="flex gap-5">
+                  <a target="_blank" rel="noreferrer" href={data.link}>
+                    <AnimatedButton
+                      variants={item}
+                      className={
+                        "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                      }
+                    >
+                      <span className="flex gap-2 items-center">
+                        <PulseAnimation className={"rounded-full h-3 w-3"} />{" "}
+                        Live
+                      </span>
+                    </AnimatedButton>
+                  </a>
+                  <a target="_blank" rel="noreferrer" href={data.githubLink}>
+                    <AnimatedButton
+                      variants={item}
+                      className={
+                        "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                      }
+                    >
+                      <span className="flex gap-2 items-center">
+                        <FaGithub /> Code
+                      </span>
+                    </AnimatedButton>
+                  </a>
+                </div>
               </div>
             </motion.div>
           );

@@ -51,7 +51,7 @@ const ProjectPage = () => {
         <p>View Source Code and more projects on GitHub</p>
         <a
           href="https://github.com/piyushNegiDev?tab=repositories"
-          target="_blank "
+          target="_blank"
           rel="noreferrer"
         >
           <FaGithub className="text-3xl" />

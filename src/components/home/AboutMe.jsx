@@ -6,7 +6,7 @@ const AboutMe = () => {
   const navigate = useNavigate();
 
   return (
-    <div id="about-me" className="space-y-20 scroll-mt-35">
+    <div id="about-me" className="space-y-5 scroll-mt-35">
       <div className="flex item-center gap-5">
         <p className="text-3xl flex items-center">
           <span className="text-primary">#</span>
@@ -15,15 +15,15 @@ const AboutMe = () => {
         <div className="grow mt-5">
           <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />
         </div>
-        <button
-          className="cursor-pointer mt-2"
+        <AnimatedButton
+          className="cursor-pointer transition-colors mt-2 border-2 px-2 py-1 rounded-lg border-primary hover:text-primary hover:border-white"
           onClick={() => {
             navigate("/about-me");
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          View all {"---->"}
-        </button>
+          View all
+        </AnimatedButton>
       </div>
 
       <div className="grid min-[925px]:grid-cols-2 gap-5 items-center">
@@ -52,7 +52,7 @@ const AboutMe = () => {
           <AnimatedButton
             onClick={() => {
               navigate("/about-me");
-              window.scrollTo({ top: 0, behavior: "smooth" });
+                window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             className={
               "border-2 rounded-lg cursor-pointer max-[925px]:mx-auto min-[925px]:mr-auto hover:border-white hover:text-primary  border-primary text-white px-5 py-3 transition-colors"

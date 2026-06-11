@@ -1,4 +1,4 @@
-// import YeahMovies from "../../assets/YeahMovies.png";
+import YeahMovies from "../../assets/YeahMovies.png";
 import SnapShot from "../../assets/SnapShot.png";
 import PennyFlow from "../../assets/PennyFlow.png";
 import ScheduleTracker from "../../assets/ScheduleTracker.png";
@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import Tilt from "react-parallax-tilt";
 import { Fragment } from "react";
+import { FaGithub } from "react-icons/fa";
+import PulseAnimation from "../PulseAnimation";
 
 const container = {
   hidden: {
@@ -41,37 +43,41 @@ const Projects = () => {
         "REACT, VITE, REACT-ROUTER, FIREBASE, TAILWIND, FORMIK, YUP, VERCEL",
       name: "SnapShot",
       description:
-        "SnapShot A full-stack notes app with real-time sync, user authentication with email verification, protected routes, and a light/dark theme toggle.",
+        "A full-stack notes app with real-time sync, user authentication with email verification, protected routes, and a light/dark theme toggle.",
       link: "https://notes-app-react-liard.vercel.app/dashboard",
+      githubLink: "https://github.com/piyushNegiDev/Notes-App-React",
     },
     {
       img: PennyFlow,
       stack: "REACT, VITE, REACT-ROUTER, RECHARTS, TAILWIND, DAYJS, VERCEL",
       name: "PennyFlow",
       description:
-        "PennyFlow A personal finance tracker to log and categorize expenses, with an interactive dashboard and charts to visualize spending over time.",
+        "A personal finance tracker to log and categorize expenses, with an interactive dashboard and charts to visualize spending over time.",
       link: "https://expense-tracker-react-theta-six.vercel.app/",
+      githubLink: "https://github.com/piyushNegiDev/Expense-Tracker-React",
     },
     {
       img: ScheduleTracker,
       stack: "HTML, CSS, JAVASCRIPT, EXPRESS, MONGODB, JWT, VERCEL",
       name: "Schedule Tracker",
       description:
-        "Schedule Tracker A full-stack daily habit and schedule tracking app where users create entries and check them off each day, with JWT auth, per-user data scoping, and a REST API backend.",
+        "A full-stack daily habit and schedule tracking app where users create entries and check them off each day, with JWT auth, per-user data scoping, and a REST API backend.",
       link: "https://schedule-tracker-nu.vercel.app/",
+      githubLink: "https://github.com/piyushNegiDev/Schedule-Tracker",
     },
-    // {
-    //   img: YeahMovies,
-    //   stack: "HTML, CSS, JAVASCRIPT, TMDB-API, LOCALSTORAGE, GITHUB-PAGES",
-    //   name: "YeahMovies",
-    //   description:
-    //     "YeahMovies A static movie discovery app powered by the TMDB API. Browse trending, top-rated, and upcoming films, search by title or actor, filter by genre, and save favorites to a local watchlist.",
-    //   link: "https://piyushnegidev.github.io/YeahMovies/",
-    // },
+    {
+      img: YeahMovies,
+      stack: "HTML, CSS, JAVASCRIPT, TMDB-API, LOCALSTORAGE, GITHUB-PAGES",
+      name: "YeahMovies",
+      description:
+        "A static movie discovery app powered by the TMDB API. Browse trending, top-rated, and upcoming films, search by title or actor, filter by genre, and save favorites to a local watchlist.",
+      link: "https://piyushnegidev.github.io/YeahMovies/",
+      githubLink: "https://github.com/piyushNegiDev/YeahMovies",
+    },
   ];
 
   return (
-    <div id="projects" className="space-y-20 scroll-mt-35">
+    <div id="projects" className="space-y-5 scroll-mt-35">
       <div className="flex item-center gap-5">
         <p className="text-3xl flex items-center">
           <span className="text-primary">#</span>
@@ -80,18 +86,18 @@ const Projects = () => {
         <div className="grow mt-5">
           <div className="h-0.5 bg-primary w-full sm:w-50 md:w-100" />
         </div>
-        <button
-          className="cursor-pointer mt-2"
+        <AnimatedButton
+          className={`cursor-pointer transition-colors mt-2 border-2 px-2 py-1 rounded-lg border-primary hover:text-primary hover:border-white`}
           onClick={() => {
             navigate("/projects");
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          View all {"---->"}
-        </button>
+          View all
+        </AnimatedButton>
       </div>
 
-      <motion.div className="grid grid-cols-[repeat(auto-fit,minmax(335px,1fr))] gap-5">
+      <motion.div className="grid md:grid-cols-[repeat(auto-fit,minmax(365px,1fr))] gap-5">
         {projectsData.map((data) => {
           return (
             <Fragment key={data.name}>
@@ -121,16 +127,39 @@ const Projects = () => {
                     <motion.p variants={item} className="text-gray">
                       {data.description}
                     </motion.p>
-                    <a target="_blank" rel="noreferrer" href={data.link}>
-                      <AnimatedButton
-                        variants={item}
-                        className={
-                          "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
-                        }
+                    <div className="flex gap-5">
+                      <a target="_blank" rel="noreferrer" href={data.link}>
+                        <AnimatedButton
+                          variants={item}
+                          className={
+                            "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                          }
+                        >
+                          <span className="flex gap-2 items-center">
+                            <PulseAnimation
+                              className={"rounded-full h-3 w-3"}
+                            />{" "}
+                            Live
+                          </span>
+                        </AnimatedButton>
+                      </a>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={data.githubLink}
                       >
-                        <span>Live {"<-->"}</span>
-                      </AnimatedButton>
-                    </a>
+                        <AnimatedButton
+                          variants={item}
+                          className={
+                            "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                          }
+                        >
+                          <span className="flex gap-2 items-center">
+                            <FaGithub /> Code
+                          </span>
+                        </AnimatedButton>
+                      </a>
+                    </div>
                   </div>
                 </motion.div>
               </Tilt>

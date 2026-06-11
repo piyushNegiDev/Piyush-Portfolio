@@ -1,21 +1,25 @@
 import AnimatedButton from "../AnimatedButton";
 import { motion } from "motion/react";
+import PulseAnimation from "../pulseAnimation";
+import { FaGithub } from "react-icons/fa";
 
 const GameProjects = ({ container, item }) => {
   const gameProjectsData = [
     {
       stack: "HTML, CSS, JAVASCRIPT, VERCEL",
       description:
-        "2048 is a browser-based implementation of the classic number puzzle game. Slide tiles using arrow keys to merge matching numbers and reach the 2048 tile. Features score tracking, random tile generation, and game-over detection — all built with vanilla web technologies, no frameworks.",
+        "A browser-based implementation of the classic number puzzle. Slide tiles to merge matching numbers and reach 2048, with score tracking and game-over detection, no frameworks.",
       name: "2048 Game",
       link: "https://2048-game-zeta-gold.vercel.app/",
+      githubLink: "https://github.com/piyushNegiDev/2048-game",
     },
     {
       stack: "HTML, CSS, JAVASCRIPT, VERCEL",
       description:
-        "Advance Memory Game is a feature-rich card matching game playable across three difficulty levels — Easy (4*4), Medium (6*6), and Hard (8*8). It includes a card preview timer, hint system, pause/resume, live move and time tracking, best score saved in localStorage, and sound effects — all built with zero dependencies.",
+        "A feature-rich card matching game across three difficulty levels, Easy (4*4), Medium (6*6), and Hard (8*8) with a preview timer, hint system, pause/resume, and best score tracking.",
       name: "Memory Game",
       link: "https://advance-memory-game.vercel.app/",
+      githubLink: "https://github.com/piyushNegiDev/Advance-Memory-Game",
     },
   ];
 
@@ -57,16 +61,33 @@ const GameProjects = ({ container, item }) => {
                 <motion.p variants={item} className="text-gray">
                   {data.description}
                 </motion.p>
-                <a target="_blank" rel="noreferrer" href={data.link}>
-                  <AnimatedButton
-                    variants={item}
-                    className={
-                      "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
-                    }
-                  >
-                    <span>Live {"<-->"}</span>
-                  </AnimatedButton>
-                </a>
+                <div className="flex gap-5">
+                  <a target="_blank" rel="noreferrer" href={data.link}>
+                    <AnimatedButton
+                      variants={item}
+                      className={
+                        "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                      }
+                    >
+                      <span className="flex gap-2 items-center">
+                        <PulseAnimation className={"rounded-full h-3 w-3"} />{" "}
+                        Live
+                      </span>
+                    </AnimatedButton>
+                  </a>
+                  <a target="_blank" rel="noreferrer" href={data.githubLink}>
+                    <AnimatedButton
+                      variants={item}
+                      className={
+                        "cursor-pointer rounded-lg border-2 hover:text-primary hover:border-white transition-colors border-primary p-2"
+                      }
+                    >
+                      <span className="flex gap-2 items-center">
+                        <FaGithub /> Code
+                      </span>
+                    </AnimatedButton>
+                  </a>
+                </div>
               </div>
             </motion.div>
           );
