@@ -1,6 +1,6 @@
 import AnimatedButton from "../AnimatedButton";
 import { motion } from "motion/react";
-import PulseAnimation from "../pulseAnimation";
+import PulseAnimation from "../PulseAnimation";
 import { FaGithub } from "react-icons/fa";
 
 const GameProjects = ({ container, item }) => {

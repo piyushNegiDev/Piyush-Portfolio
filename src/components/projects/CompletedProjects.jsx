@@ -7,7 +7,7 @@ import AgencyAi from "../../assets/AgencyAi.png";
 import AnimatedButton from "../AnimatedButton";
 import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa";
-import PulseAnimation from "../pulseAnimation";
+import PulseAnimation from "../PulseAnimation";
 
 const CompletedProjects = ({ container, item }) => {
   const completProjectsData = [
