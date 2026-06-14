@@ -29,15 +29,22 @@ const Hero = () => {
               repeat={Infinity}
             />
           </p>
-          <HashLink smooth to="/#contact">
-            <AnimatedButton
-              className={
-                "border-2 rounded-lg cursor-pointer  hover:border-white hover:text-primary  border-primary px-5 py-3 transition-colors"
-              }
-            >
-              Contact me !!
-            </AnimatedButton>
-          </HashLink>
+          <div className="flex gap-3 flex-wrap max-lg:justify-center">
+            <a href="/Piyush-Negi-Resume.pdf" target="_blank" rel="noreferrer">
+              <AnimatedButton className="border-2 rounded-lg cursor-pointer hover:border-white hover:text-primary border-primary px-5 py-3 transition-colors">
+                View Resume
+              </AnimatedButton>
+            </a>
+            <HashLink smooth to="/#contact">
+              <AnimatedButton
+                className={
+                  "border-2 rounded-lg cursor-pointer  hover:border-white hover:text-primary  border-primary px-5 py-3 transition-colors"
+                }
+              >
+                Contact me !!
+              </AnimatedButton>
+            </HashLink>
+          </div>
         </div>
 
         <div className="relative flex flex-col items-center max-lg:order-0">
