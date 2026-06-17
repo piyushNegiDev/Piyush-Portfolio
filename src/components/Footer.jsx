@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -34,6 +34,13 @@ const Footer = () => {
               rel="noreferrer"
             >
               <FaInstagram className="text-2xl" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/piyush-negi381/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin className="text-2xl" />
             </a>
           </div>
         </div>

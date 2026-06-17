@@ -1,7 +1,7 @@
 import { CgMail } from "react-icons/cg";
 import ContactForm from "../ContactForm";
 import { motion } from "motion/react";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const container = {
   hidden: {
@@ -49,15 +49,17 @@ const Contact = () => {
             Developer position and would love to be part of a team where I can
             make an impact.
           </p>
-          <div className="border border-gray p-1 pr-2 rounded-lg justify-self-center sm:justify-self-start">
+          <div className="border border-gray p-1 pr-2 rounded-lg justify-self-center sm:justify-self-start flex flex-col gap-1">
             <h2 className="p-1">Message me here</h2>
             <p className="text-gray text-lg flex gap-1 items-center">
               <CgMail className="text-3xl" />{" "}
               <span>piyushnegi381@gmail.com</span>
             </p>
             <p className="text-gray text-lg flex gap-1 items-center">
-              <FaInstagram className="text-3xl" />{" "}
-              <span>piyush_negi381</span>
+              <FaInstagram className="text-3xl" /> <span>piyush_negi381</span>
+            </p>
+            <p className="text-gray text-lg flex gap-1 items-center">
+              <FaLinkedin className="text-3xl" /> <span>piyush-negi381</span>
             </p>
           </div>
         </motion.div>
