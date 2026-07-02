@@ -19,10 +19,10 @@ const FunFactsSection = () => {
           </div>
 
           <div className="flex gap-2">
+            <div className="border p-2 rounded-lg">I am a night owl coder</div>
             <div className="border p-2 rounded-lg">
-              I like butter chicken with naan
+              I debug better with coffee
             </div>
-            <div className="border p-2 rounded-lg">I am still unemployed</div>
           </div>
 
           <div className="flex">
