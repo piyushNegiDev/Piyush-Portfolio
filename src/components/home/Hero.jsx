@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="flex gap-3 items-center border border-gray px-2 py-1">
             <PulseAnimation className={"h-5 w-5"} />
             <span className="text-lg text-center">
-              <span className="text-gray">Currently working on</span> Portfolio
+              <span className="text-gray">Currently learning</span> Backend Tech
             </span>
           </div>
         </div>
