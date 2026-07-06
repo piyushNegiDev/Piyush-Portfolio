@@ -22,7 +22,7 @@ const AboutSection = () => {
           className="flex flex-col gap-5 text-lg text-gray max-[925px]:text-center"
         >
           <p>
-            I'm Piyush Negi, a Frontend Developer based in New Delhi, passionate
+            I'm Piyush Negi, a Software Developer based in New Delhi, passionate
             about building modern, responsive web applications with React,
             Tailwind CSS, and Firebase. I enjoy creating clean, intuitive user
             experiences that work seamlessly across all devices.
@@ -36,16 +36,16 @@ const AboutSection = () => {
           </p>
 
           <p>
-            I have experience working with modern frontend technologies,
-            integrating APIs, managing application state, handling form
-            validation, and deploying projects to production. I also work with
-            tools like Git, GitHub, Figma, and Vite while following clean and
-            maintainable coding practices.
+            I have experience working with modern web technologies, integrating
+            APIs, managing application state, handling form validation, and
+            deploying projects to production. I also work with tools like Git,
+            GitHub, Figma, and Vite while following clean and maintainable
+            coding practices.
           </p>
 
           <p>
             Currently, I'm expanding my skills in Node.js, Express, and MongoDB
-            while actively seeking a Frontend Developer role where I can
+            while actively seeking a Software Developer role where I can
             contribute, learn, and grow as a developer.
           </p>
         </motion.div>

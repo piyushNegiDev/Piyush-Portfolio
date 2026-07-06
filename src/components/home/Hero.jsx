@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="space-y-5 lg:space-y-10 max-lg:text-center max-lg:order-1">
           <p className="text-4xl max-sm:text-3xl font-semibold text-gray">
             Piyush is a <span className="flow-text">web designer</span> and{" "}
-            <span className="flow-text">front-end developer</span>
+            <span className="flow-text">Software developer</span>
           </p>
           <p className="text-gray max-w-xl min-h-20 max-lg:mx-auto">
             <TypeAnimation
@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="flex gap-3 items-center border border-gray px-2 py-1">
             <PulseAnimation className={"h-5 w-5"} />
             <span className="text-lg text-center">
-              <span className="text-gray">Currently learning</span> Backend Tech
+              <span className="text-gray">Open to</span> New Opportunities
             </span>
           </div>
         </div>

@@ -52,7 +52,7 @@ const Skills = () => {
       ],
     },
     {
-      h: "📚 Learning Next",
+      h: "🗄️ Backend Development",
       stack: ["Node.js", "Express.js", "MongoDB"],
     },
   ];

@@ -15,7 +15,7 @@ const Footer = () => {
             </span>
           </p>
           <p className="text-lg flow-text text-center max-md:hidden">
-            Web designer and front-end developer
+            Web designer and Software developer
           </p>
         </div>
         <div className="flex flex-col gap-5 items-center justify-center">

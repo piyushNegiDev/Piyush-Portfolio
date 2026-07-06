@@ -45,7 +45,7 @@ const Contact = () => {
         >
           <p className="text-gray text-lg mb-10">
             Whether you have an opportunity, a project, or just want to connect,
-            my inbox is always open. I'm currently seeking a full-time Front-end
+            my inbox is always open. I'm currently seeking a full-time Software
             Developer position and would love to be part of a team where I can
             make an impact.
           </p>

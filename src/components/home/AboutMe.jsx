@@ -35,7 +35,7 @@ const AboutMe = () => {
           className="flex flex-col gap-5 text-lg text-gray max-[925px]:text-center"
         >
           <p>
-            I'm Piyush, a Frontend Developer specializing in React, Tailwind
+            I'm Piyush, a Software Developer specializing in React, Tailwind
             CSS, and Firebase. I enjoy building responsive, user-focused web
             applications that combine clean design with seamless functionality.
           </p>
@@ -46,13 +46,13 @@ const AboutMe = () => {
           </p>
           <p>
             Currently exploring full-stack development while actively seeking a
-            Frontend Developer role where I can build impactful products and
+            Software Developer role where I can build impactful products and
             continue growing my skills.
           </p>
           <AnimatedButton
             onClick={() => {
               navigate("/about-me");
-                window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             className={
               "border-2 rounded-lg cursor-pointer max-[925px]:mx-auto min-[925px]:mr-auto hover:border-white hover:text-primary  border-primary text-white px-5 py-3 transition-colors"

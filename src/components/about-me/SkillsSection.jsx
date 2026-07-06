@@ -57,7 +57,7 @@ const SkillsSection = () => {
       time: 3000,
     },
     {
-      h: "📚 Learning Next",
+      h: "🗄️ Backend Development",
       stack: ["Node.js", "Express.js", "MongoDB"],
       time: 3500,
     },
